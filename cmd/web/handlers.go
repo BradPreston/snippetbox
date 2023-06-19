@@ -22,10 +22,6 @@ func (app *application) home(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    for _, snippet := range snippets {
-        fmt.Fprintf(w, "%+v\n", snippet)
-    }
-
     files := []string{
         "./ui/html/base.tmpl",
         "./ui/html/partials/nav.tmpl",
